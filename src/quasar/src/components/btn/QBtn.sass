@@ -1,0 +1,258 @@
+.q-btn
+  display: inline-flex
+  flex-direction: column
+  align-items: stretch
+  position: relative
+  outline: 0
+  border: 0
+  vertical-align: middle
+  font-size: $button-font-size
+  text-decoration: none
+  color: inherit
+  background: transparent
+  font-weight: $button-font-weight
+  text-transform: uppercase
+  text-align: center
+  width: auto
+  height: auto
+  cursor: default
+  padding: $button-padding
+  line-height: 18px
+  //min-height: 2.572em
+
+  &--standard
+    height: 36px
+    background: $primary
+    color: white
+    min-width: 140px
+    font-weight: 500
+    &:hover
+      opacity: .85
+    &.disabled
+      background: $blue-grey-3
+  
+  &--liner
+    height:36px
+    border: 1px solid currentColor
+    color: $primary
+    min-width: 140px
+    &:hover
+      background: rgba(6,99,190,0.10)
+    &.disabled
+      border: 1px solid $grey-3
+      background: $grey-0
+      color: $grey-4
+    
+  &--func
+    height: 36px
+    border: 1px solid $grey-3
+    &:hover
+      background: rgba(6,99,190,0.10)
+      color: $primary
+      border-color: currentColor
+      z-index: 99
+    &.disabled
+      border: 1px solid $grey-3
+      background: $grey-0
+      color: $grey-4
+
+  &--dash
+    height: 30px
+    border: 1px dashed currentColor
+    line-height: 20px
+    color: $primary
+    padding: 4px 16px
+    &:hover
+      background: rgba(6,99,190,0.10)
+    &.disabled
+      border: 1px dashed $grey-3
+      background: $grey-0
+      color: $grey-4
+  
+  &--round
+    height: 30px
+    border-radius: 15px !important
+    line-height: 20px
+    padding: 4px 25px
+    background: $primary
+    color: white
+    font-weight: 500
+    min-width: 0
+    &:hover
+      opacity: .85
+    &.disabled
+      background: $blue-grey-3
+      
+  &--font
+    color: $primary
+    padding: 0 2px
+    line-height: 22px
+    &:hover
+      opacity: .8
+    &.disabled
+      color: $grey-4
+
+  &--font-dark
+    padding: 0 2px
+    line-height: 22px
+    &:hover
+      color: $primary
+    &.disabled
+      color: $grey-4
+
+  .q-icon, .q-spinner
+    font-size: $button-line-height
+
+  &.disabled
+    opacity: 1 !important
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    border-radius: inherit
+
+  &--actionable
+    cursor: pointer
+    &.q-btn--round,
+    &.q-btn--standard
+      &:before
+        // This places the button active raise shadow behind adjacent elements
+        // Active raise shadow will still be visible under adjacent transparent elements, this is ok and coherent with a desired transparency effect.
+        // Visible active raise shadow can be removed by specifying a background color to the button
+        // Visible active raise shadow can be removed by specifying a flat or outline button type
+        //transition: box-shadow $button-transition
+      &:active,
+      &.q-btn--active
+        opacity: 1 !important
+        &:before
+          background: #004D99
+    &.q-btn--liner
+      &:active,
+      &.q-btn--active
+        color: #004D99
+        background: none
+    &.q-btn--func
+      &:active,
+      &.q-btn--active
+        color: #004D99
+        background: none
+        border-color: currentColor
+    &.q-btn--dash
+      &:active,
+      &.q-btn--active
+        color: #004D99
+        background: none
+        border-color: currentColor
+    &.q-btn--font
+      &:active,
+      &.q-btn--active
+        color: #004D99
+        opacity: 1
+    &.q-btn--font-dark
+      &:active,
+      &.q-btn--active
+        color: black
+
+    
+
+
+  &--no-uppercase
+    text-transform: none
+
+  &--rectangle
+    border-radius: $button-border-radius
+
+  &--outline
+    background: transparent !important
+
+    &:before
+      border: 1px solid currentColor
+
+  &--push
+    border-radius: $button-push-border-radius
+
+    &:before
+      border-bottom: 3px solid rgba(0,0,0,.15)
+
+    &.q-btn--actionable
+      transition: transform $button-transition
+
+      &:before
+        transition: border-width $button-transition
+
+      &:active,
+      &.q-btn--active
+        transform: translateY(2px)
+
+        &:before
+          border-bottom-width: 0
+
+  &--rounded
+    border-radius: $button-rounded-border-radius
+
+  &--flat, &--outline, &--unelevated
+    &:before
+      box-shadow: none
+
+  &--dense
+    padding: $button-dense-padding
+    min-height: 2em
+
+    &.q-btn--round
+      padding: 0
+      min-height: 2.4em
+      min-width: 2.4em
+
+    .on-left
+      margin-right: 6px
+
+    .on-right
+      margin-left: 6px
+
+  &--fab, &--fab-mini
+    .q-icon
+      font-size: 24px
+
+  &--fab
+    padding: 16px
+    min-height: 56px
+    min-width: 56px
+
+    .q-icon
+      margin: auto
+
+  &--fab-mini
+    padding: 8px
+    min-height: 40px
+    min-width: 40px
+
+  // workaround for alignment/sizing change when showing loader
+  &__content
+    transition: opacity .3s
+    z-index: 0
+
+    &--hidden
+      opacity: 0
+      pointer-events: none
+
+  &__progress
+    border-radius: inherit
+    z-index: 0
+
+    &-indicator
+      z-index: -1
+      transform: translateX(-100%)
+      background: rgba(255,255,255,.25)
+    &--dark
+      .q-btn__progress-indicator
+        background: rgba(0,0,0,.2)
+
+  &--flat, &--outline
+    .q-btn__progress-indicator
+      opacity: 0.2
+      background: currentColor

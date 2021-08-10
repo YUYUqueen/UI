@@ -1,0 +1,289 @@
+$space-base   : 16px !default
+$space-x-base : $space-base !default
+$space-y-base : $space-base !default
+
+$space-none : (x: 0, y: 0) !default
+$space-xs   : (x: ($space-x-base * .25), y: ($space-y-base * .25)) !default
+$space-sm   : (x: ($space-x-base * .5), y: ($space-y-base * .5)) !default
+$space-md   : (x: $space-x-base, y: $space-y-base) !default
+$space-lg  : (x: ($space-x-base * 1.25), y: ($space-y-base* 1.25)) !default
+$space-xl   : (x: ($space-x-base * 1.5), y: ($space-y-base * 1.5)) !default
+$space-xxl   : (x: ($space-x-base * 2), y: ($space-y-base * 2)) !default
+$space-xxxl   : (x: ($space-x-base * 3), y: ($space-y-base * 3)) !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$spaces: ('none': $space-none, 'xs': $space-xs, 'sm': $space-sm, 'md': $space-md, 'lg': $space-lg, 'xl': $space-xl, 'xxl': $space-xxl, 'xxxl': $space-xxxl) !default
+
+$animate-duration : .3s !default
+$animate-delay    : .3s !default
+$animate-repeat   : 1 !default
+
+// Max width at which point
+// current size ends
+$breakpoint-xs: 599px !default
+$breakpoint-sm: 1023px !default
+$breakpoint-md: 1439px !default
+$breakpoint-lg: 1919px !default
+
+$flex-cols      : 12 !default
+$flex-gutter-xs : ($space-base * .25) !default
+$flex-gutter-sm : ($space-base * .5) !default
+$flex-gutter-md : $space-base !default
+$flex-gutter-lg : $space-base*1.25 !default
+$flex-gutter-xl : ($space-base * 1.5) !default
+$flex-gutter-xxl : ($space-base * 2) !default
+$flex-gutter-xxxl : ($space-base * 3) !default
+
+$body-font-size   : 14px !default
+$body-line-height : 1.5 !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$flex-gutter: ('none': 0, 'xs': $flex-gutter-xs, 'sm': $flex-gutter-sm, 'md': $flex-gutter-md, 'lg': $flex-gutter-lg, 'xl': $flex-gutter-xl, 'xxl': $flex-gutter-xxl, 'xxxl': $flex-gutter-xxxl) !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default
+
+$breakpoint-xs-min: 0 !default
+$breakpoint-xs-max: $breakpoint-xs !default
+
+$breakpoint-sm-min: map-get($sizes, "sm") !default
+$breakpoint-sm-max: $breakpoint-sm !default
+
+$breakpoint-md-min: map-get($sizes, "md") !default
+$breakpoint-md-max: $breakpoint-md !default
+
+$breakpoint-lg-min: map-get($sizes, "lg") !default
+$breakpoint-lg-max: $breakpoint-lg !default
+
+$breakpoint-xl-min: map-get($sizes, "xl") !default
+$breakpoint-xl-max: 9999px !default
+
+$h1:        (size: 2rem,     line-height: 2rem,     letter-spacing: -.01562em, weight: 500)  !default
+$h2:        (size: 1.5rem,   line-height: 1.5rem,   letter-spacing: -.00833em, weight: 500)  !default
+$title1:    (size: 1.125rem, line-height: 1.125rem, letter-spacing: .00937em,  weight: 500)  !default
+$subtitle:  (size: 1rem,     line-height: 1rem,     letter-spacing: .00714em,  weight: 500)  !default
+$subtitle1: (size: .875rem,  line-height: .875rem,  letter-spacing: .03125em,  weight: 500)  !default
+$body:      (size: .875rem,  line-height: .875rem,  letter-spacing: .03125em,  weight: 400)  !default
+$body1:     (size: .75rem,   line-height: .75rem,   letter-spacing: .01786em,  weight: 400)  !default
+$hint:      (size: .625rem,  line-height: .625rem,  letter-spacing: .16667em,  weight: 400)  !default
+$caption:   (size: .5rem,    line-height: .5rem,    letter-spacing: .03333em,  weight: 400)  !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$headings: ('h1': $h1, 'h2': $h2, 'title1':$title1, 'subtitle': $subtitle, 'subtitle1': $subtitle1, 'body': $body, 'body1': $body1, 'hint': $hint, 'caption': $caption) !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$h-tags: (h1: map-get($headings, "h1"), h2: map-get($headings, "h2")) !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$text-weights: (thin: 100, light: 300, regular: 400, medium: 500, bold: 700, bolder: 900) !default
+
+$primary   : #0663BE !default
+
+// used by dark mode
+
+$positive  : #0663BE !default
+$negative  : #FF2946 !default
+
+
+$separator-color  : #DDDDDD !default
+
+$black-0 : #333333 !default
+$indigo-grey : #F4F6FD !default
+$indigo-4 : #7986cb !default
+$indigo-6 : #3f51b5 !default
+$indigo-8 : #303f9f !default
+$red-3 : #55D1D1 !default
+$red-4 : #EF5350 !default
+$red-5 : #FF2946 !default
+$red-6 : #F93524 !default
+$red-7 : #EA0303 !default
+$blue-6 : #4386CA !default
+$blue-7 : #0378EA !default
+$blue-8 : #0663BE !default
+$blue-9 : #04488C !default
+$blue-10 : #4386CA !default
+$cyan-3 : #55D1D1 !default
+$cyan-4 : #24C8F9 !default
+$green-4 : #8CBC48 !default
+$green-6 : #4DBB59 !default
+$orange-3 : #FEC400 !default
+$orange-7 : #FD8D00 !default
+$grey-0 : #F7F7F7 !default
+$grey-1 : #EFEFEF !default
+$grey-2 : #DDDDDD !default
+$grey-3 : #BBBBBB !default
+$grey-4 : #999999 !default
+$grey-5 : #666666 !default
+$blue-grey-3 : #B0BEC5 !default
+
+$ios-statusbar-height : 20px !default
+
+$z-fab                : 990 !default
+$z-side               : 1000 !default
+$z-marginals          : 2000 !default
+$z-fixed-drawer       : 3000 !default
+$z-fullscreen         : 6000 !default
+$z-menu               : 6000 !default
+$z-top                : 7000 !default
+$z-tooltip            : 9000 !default
+$z-notify             : 9500 !default
+$z-max                : 9998 !default
+
+$shadow-color         : #000 !default
+$shadow-transition    : box-shadow .28s cubic-bezier(.4, 0, .2, 1) !default
+$inset-shadow         : 0 7px 9px -7px rgba($shadow-color, .7) inset !default
+$inset-shadow-down    : 0 -7px 9px -7px rgba($shadow-color, .7) inset !default
+
+$elevation-umbra      : rgba($shadow-color, .2) !default
+$elevation-penumbra   : rgba($shadow-color, .14) !default
+$elevation-ambient    : rgba($shadow-color, .12) !default
+
+$shadow-0  : 0 0 0 $elevation-umbra, 0 0 0 $elevation-penumbra, 0 0 0 $elevation-ambient !default
+$shadow-1  : 0 1px 3px $elevation-umbra, 0 1px 1px $elevation-penumbra, 0 2px 1px -1px $elevation-ambient !default
+$shadow-2  : 0 1px 5px $elevation-umbra, 0 2px 2px $elevation-penumbra, 0 3px 1px -2px $elevation-ambient !default
+$shadow-3  : 0 1px 8px $elevation-umbra, 0 3px 4px $elevation-penumbra, 0 3px 3px -2px $elevation-ambient !default
+$shadow-4  : 0 2px 4px -1px $elevation-umbra, 0 4px 5px $elevation-penumbra, 0 1px 10px $elevation-ambient !default
+$shadow-5  : 0 3px 5px -1px $elevation-umbra, 0 5px 8px $elevation-penumbra, 0 1px 14px $elevation-ambient !default
+$shadow-6  : 0 3px 5px -1px $elevation-umbra, 0 6px 10px $elevation-penumbra, 0 1px 18px $elevation-ambient !default
+$shadow-7  : 0 4px 5px -2px $elevation-umbra, 0 7px 10px 1px $elevation-penumbra, 0 2px 16px 1px $elevation-ambient !default
+$shadow-8  : 0 5px 5px -3px $elevation-umbra, 0 8px 10px 1px $elevation-penumbra, 0 3px 14px 2px $elevation-ambient !default
+$shadow-9  : 0 5px 6px -3px $elevation-umbra, 0 9px 12px 1px $elevation-penumbra, 0 3px 16px 2px $elevation-ambient !default
+$shadow-10 : 0 6px 6px -3px $elevation-umbra, 0 10px 14px 1px $elevation-penumbra, 0 4px 18px 3px $elevation-ambient !default
+$shadow-11 : 0 6px 7px -4px $elevation-umbra, 0 11px 15px 1px $elevation-penumbra, 0 4px 20px 3px $elevation-ambient !default
+$shadow-12 : 0 7px 8px -4px $elevation-umbra, 0 12px 17px 2px $elevation-penumbra, 0 5px 22px 4px $elevation-ambient !default
+$shadow-13 : 0 7px 8px -4px $elevation-umbra, 0 13px 19px 2px $elevation-penumbra, 0 5px 24px 4px $elevation-ambient !default
+$shadow-14 : 0 7px 9px -4px $elevation-umbra, 0 14px 21px 2px $elevation-penumbra, 0 5px 26px 4px $elevation-ambient !default
+$shadow-15 : 0 8px 9px -5px $elevation-umbra, 0 15px 22px 2px $elevation-penumbra, 0 6px 28px 5px $elevation-ambient !default
+$shadow-16 : 0 8px 10px -5px $elevation-umbra, 0 16px 24px 2px $elevation-penumbra, 0 6px 30px 5px $elevation-ambient !default
+$shadow-17 : 0 8px 11px -5px $elevation-umbra, 0 17px 26px 2px $elevation-penumbra, 0 6px 32px 5px $elevation-ambient !default
+$shadow-18 : 0 9px 11px -5px $elevation-umbra, 0 18px 28px 2px $elevation-penumbra, 0 7px 34px 6px $elevation-ambient !default
+$shadow-19 : 0 9px 12px -6px $elevation-umbra, 0 19px 29px 2px $elevation-penumbra, 0 7px 36px 6px $elevation-ambient !default
+$shadow-20 : 0 10px 13px -6px $elevation-umbra, 0 20px 31px 3px $elevation-penumbra, 0 8px 38px 7px $elevation-ambient !default
+$shadow-21 : 0 10px 13px -6px $elevation-umbra, 0 21px 33px 3px $elevation-penumbra, 0 8px 40px 7px $elevation-ambient !default
+$shadow-22 : 0 10px 14px -6px $elevation-umbra, 0 22px 35px 3px $elevation-penumbra, 0 8px 42px 7px $elevation-ambient !default
+$shadow-23 : 0 11px 14px -7px $elevation-umbra, 0 23px 36px 3px $elevation-penumbra, 0 9px 44px 8px $elevation-ambient !default
+$shadow-24 : 0 11px 15px -7px $elevation-umbra, 0 24px 38px 3px $elevation-penumbra, 0 9px 46px 8px $elevation-ambient !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$shadows: ($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10, $shadow-11, $shadow-12, $shadow-13, $shadow-14, $shadow-15, $shadow-16, $shadow-17, $shadow-18, $shadow-19, $shadow-20, $shadow-21, $shadow-22, $shadow-23, $shadow-24)
+
+$shadow-up-0  : 0 0 0 $elevation-umbra, 0 0 0 $elevation-penumbra, 0 0 0 $elevation-ambient !default
+$shadow-up-1  : 0 -1px 3px $elevation-umbra, 0 -1px 1px $elevation-penumbra, 0 -2px 1px -1px $elevation-ambient !default
+$shadow-up-2  : 0 -1px 5px $elevation-umbra, 0 -2px 2px $elevation-penumbra, 0 -3px 1px -2px $elevation-ambient !default
+$shadow-up-3  : 0 -1px 8px $elevation-umbra, 0 -3px 4px $elevation-penumbra, 0 -3px 3px -2px $elevation-ambient !default
+$shadow-up-4  : 0 -2px 4px -1px $elevation-umbra, 0 -4px 5px $elevation-penumbra, 0 -1px 10px $elevation-ambient !default
+$shadow-up-5  : 0 -3px 5px -1px $elevation-umbra, 0 -5px 8px $elevation-penumbra, 0 -1px 14px $elevation-ambient !default
+$shadow-up-6  : 0 -3px 5px -1px $elevation-umbra, 0 -6px 10px $elevation-penumbra, 0 -1px 18px $elevation-ambient !default
+$shadow-up-7  : 0 -4px 5px -2px $elevation-umbra, 0 -7px 10px 1px $elevation-penumbra, 0 -2px 16px 1px $elevation-ambient !default
+$shadow-up-8  : 0 -5px 5px -3px $elevation-umbra, 0 -8px 10px 1px $elevation-penumbra, 0 -3px 14px 2px $elevation-ambient !default
+$shadow-up-9  : 0 -5px 6px -3px $elevation-umbra, 0 -9px 12px 1px $elevation-penumbra, 0 -3px 16px 2px $elevation-ambient !default
+$shadow-up-10 : 0 -6px 6px -3px $elevation-umbra, 0 -10px 14px 1px $elevation-penumbra, 0 -4px 18px 3px $elevation-ambient !default
+$shadow-up-11 : 0 -6px 7px -4px $elevation-umbra, 0 -11px 15px 1px $elevation-penumbra, 0 -4px 20px 3px $elevation-ambient !default
+$shadow-up-12 : 0 -7px 8px -4px $elevation-umbra, 0 -12px 17px 2px $elevation-penumbra, 0 -5px 22px 4px $elevation-ambient !default
+$shadow-up-13 : 0 -7px 8px -4px $elevation-umbra, 0 -13px 19px 2px $elevation-penumbra, 0 -5px 24px 4px $elevation-ambient !default
+$shadow-up-14 : 0 -7px 9px -4px $elevation-umbra, 0 -14px 21px 2px $elevation-penumbra, 0 -5px 26px 4px $elevation-ambient !default
+$shadow-up-15 : 0 -8px 9px -5px $elevation-umbra, 0 -15px 22px 2px $elevation-penumbra, 0 -6px 28px 5px $elevation-ambient !default
+$shadow-up-16 : 0 -8px 10px -5px $elevation-umbra, 0 -16px 24px 2px $elevation-penumbra, 0 -6px 30px 5px $elevation-ambient !default
+$shadow-up-17 : 0 -8px 11px -5px $elevation-umbra, 0 -17px 26px 2px $elevation-penumbra, 0 -6px 32px 5px $elevation-ambient !default
+$shadow-up-18 : 0 -9px 11px -5px $elevation-umbra, 0 -18px 28px 2px $elevation-penumbra, 0 -7px 34px 6px $elevation-ambient !default
+$shadow-up-19 : 0 -9px 12px -6px $elevation-umbra, 0 -19px 29px 2px $elevation-penumbra, 0 -7px 36px 6px $elevation-ambient !default
+$shadow-up-20 : 0 -10px 13px -6px $elevation-umbra, 0 -20px 31px 3px $elevation-penumbra, 0 -8px 38px 7px $elevation-ambient !default
+$shadow-up-21 : 0 -10px 13px -6px $elevation-umbra, 0 -21px 33px 3px $elevation-penumbra, 0 -8px 40px 7px $elevation-ambient !default
+$shadow-up-22 : 0 -10px 14px -6px $elevation-umbra, 0 -22px 35px 3px $elevation-penumbra, 0 -8px 42px 7px $elevation-ambient !default
+$shadow-up-23 : 0 -11px 14px -7px $elevation-umbra, 0 -23px 36px 3px $elevation-penumbra, 0 -9px 44px 8px $elevation-ambient !default
+$shadow-up-24 : 0 -11px 15px -7px $elevation-umbra, 0 -24px 38px 3px $elevation-penumbra, 0 -9px 46px 8px $elevation-ambient !default
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$shadows-up: ($shadow-up-1, $shadow-up-2, $shadow-up-3, $shadow-up-4, $shadow-up-5, $shadow-up-6, $shadow-up-7, $shadow-up-8, $shadow-up-9, $shadow-up-10, $shadow-up-11, $shadow-up-12, $shadow-up-13, $shadow-up-14, $shadow-up-15, $shadow-up-16, $shadow-up-17, $shadow-up-18, $shadow-up-19, $shadow-up-20, $shadow-up-21, $shadow-up-22, $shadow-up-23, $shadow-up-24)
+
+$generic-border-radius          : 4px !default
+$generic-hover-transition       : .3s cubic-bezier(.25, .8, .5, 1) !default
+$typography-font-family         : 'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif !default
+$min-line-height                : 1.12 !default
+
+$button-border-radius           : 2px !default
+$button-padding                 : 8px 16px !default
+$button-dense-padding           : .285em !default
+$button-transition              : $generic-hover-transition !default
+$button-font-size               : 14px !default
+$button-line-height             : 1.715em !default
+$button-font-weight             : 400 !default
+$button-shadow                  : $shadow-2 !default
+$button-shadow-active           : $shadow-5 !default
+$button-rounded-border-radius   : 28px !default
+$button-push-border-radius      : 7px !default
+
+$chat-message-received-color    : #000 !default
+$chat-message-received-bg       : $green-4 !default
+$chat-message-sent-color        : #000 !default
+$chat-message-sent-bg           : $grey-4 !default
+$chat-message-avatar-size       : 48px !default
+$chat-message-border-radius     : $generic-border-radius !default
+$chat-message-distance          : 8px !default
+$chat-message-text-padding      : 8px !default
+
+$item-base-color                : $grey-5 !default
+
+$editor-border-color            : $separator-color !default
+$editor-content-padding         : 10px !default
+$editor-content-min-height      : 10em !default
+$editor-toolbar-padding         : 4px !default
+$editor-hr-color                : $editor-border-color !default
+$editor-button-gutter           : 4px !default
+
+$table-transition               : $generic-hover-transition !default
+$table-border-radius            : $generic-border-radius !default
+$table-box-shadow               : $shadow-2 !default
+
+$table-border-color             : $separator-color !default
+$table-hover-background         : rgba(0, 0, 0, .03) !default
+$table-selected-background      : rgba(0, 0, 0, .06) !default
+
+
+$toolbar-min-height             : 50px !default
+$toolbar-padding                : 0 12px !default
+$toolbar-inset-size             : 58px !default
+$toolbar-title-font-size        : 21px !default
+$toolbar-title-font-weight      : normal !default
+$toolbar-title-letter-spacing   : .01em !default
+$toolbar-title-padding          : 0 12px !default
+
+$layout-border                  : 1px solid $separator-color !default
+$layout-shadow                  : 0 0 10px 2px rgba(0,0,0,0.2), 0 0px 10px rgba(0,0,0,0.24) !default
+
+$menu-background                : #fff !default
+$menu-box-shadow                : $shadow-2 !default
+$menu-max-width                 : 95vw !default
+
+$rating-shadow                  : 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24) !default
+
+$tooltip-color                  : #fafafa !default
+$tooltip-padding                : 6px 10px !default
+$tooltip-border-radius          : $generic-border-radius !default
+$tooltip-fontsize               : 10px !default
+$tooltip-mobile-padding         : 8px 16px !default
+$tooltip-mobile-fontsize        : 14px !default
+
+$option-focus-transition        : .22s cubic-bezier(0,0,.2,1) !default
+
+$input-font-size                : 14px !default
+$input-text-color               : rgba(0,0,0,.87) !default
+$input-label-color              : rgba(0,0,0,.6) !default
+$input-autofill-color           : inherit !default
+
+$img-loading-font-size          : 50px !default
+$img-content-position           : absolute !default
+$img-content-padding            : 16px !default
+$img-content-color              : #fff !default
+$img-content-background         : rgba(0, 0, 0, .47) !default
+
+$dimmed-background: #ffffff !default
+$editor-border-dark-color: #ffffff !default
+$editor-hr-dark-color: #ffffff !default
+$separator-dark-color  : #DDDDDD !default
+$light-dimmed-background: #ffffff !default
+$rating-grade-color: #ffffff !default
+$table-dark-border-color: #ffffff !default
+$table-dark-hover-background: #ffffff !default
+$table-dark-selected-background: #ffffff !default
+$tooltip-background: #ffffff !default
